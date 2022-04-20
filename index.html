@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+        
+    </script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+        <input type="button" id="btn_title" value="這是個標題">  
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./logon.html">Logon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onClick="logout()">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onClick="allMsg()">Msg</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</nav>
+
+<div class="container">
+    <div id="table"></div>
+</div>
+
+
+
+<form>
+    <!-- Account input -->
+    刪除功能
+    <div class="form-outline mb-4">
+        <input type="text" id="del_id" class="form-control" />
+        <label class="form-label" for="del_id">要刪除的訊息ID</label>
+    </div>
+
+    <!-- Submit button -->
+    <input type="button" name="btn_del" value="提交" onClick="del_msg()">  
+</form>
+
+
+<form>
+    <!-- Account input -->
+    留言功能
+    <div class="form-outline mb-4">
+        <input type="text" id="content" class="form-control" />
+        <label class="form-label" for="content">訊息</label>
+    </div>
+    <div class="form-outline mb-4">
+        <input type="file" id="file" data-target="file-uploader" accept="image/*" />
+    </div>
+    <div class="radiobox" >
+        <input type="radio" name="isFile" value="0"> 沒檔案<br>
+        <input type="radio" name="isFile" value="1"> 有檔案<br>
+    </div>
+    <!-- Submit button -->
+    <input type="button" name="btn_add" value="提交" onClick="add_msg()">  
+</form>
+
+<form>
+    <!-- Account input -->
+    顯示單則留言
+    <div class="form-outline mb-4">
+        <input type="text" id="msg_id" class="form-control" />
+        <label class="form-label" for="msg_id">輸入id</label>
+    </div>
+    <input type="button" name="btn_msg" value="提交" onClick="single_msg()">  
+</form>
+
+
+<form>
+    <!-- Account input -->
+    標題更改
+    <div class="form-outline mb-4">
+        <input type="text" id="title" class="form-control" />
+        <label class="form-label" for="title">輸入標題</label>
+    </div>
+    <input type="button" name="btn_title" value="提交" onClick="change_title()">  
+</form>
+
+<script type="text/javascript" src="./js/script.js"></script>
+<script>
+    $( document ).ready(function() {
+        load_title();
+        allMsg();
+    });
+    
+</script>
+
+
+</body>
+
+
+
+</html>
