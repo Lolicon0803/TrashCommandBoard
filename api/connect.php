@@ -1,12 +1,5 @@
 <?php
-phpinfo();
-/*
- *  PDO DATABASE CLASS
- *  Connects Database Using PDO
- *  Creates Prepeared Statements
- *     Binds params to values
- *  Returns rows and results
- */
+
 class Database
 {
     private $host   = '';
